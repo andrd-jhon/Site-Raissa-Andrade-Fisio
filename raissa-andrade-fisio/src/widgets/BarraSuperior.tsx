@@ -22,22 +22,29 @@ export default function BarraSuperior() {
     }, []);
 
     const navList = (
-        <ul className="flex gap-6">
+        <ul className=
+        {`flex gap-6 transition-all duration-300 
+            ${isWindowMobile 
+                ? `flex-col items-center justify-center absolute top-0 left-0 w-full h-full
+                bg-[#84573C] 
+                ${openNav ? "opacity-95 visible" : "opacity-0 invisible"}`
+                : 'flex-row static opacity-100 visible'}
+        `}>
             <li className="
-                text-sm 
-                text-blue-500
+                text-xl
+                text-white
                 p-1
                 font-normal
             "><a href="#">Quem Sou</a></li>
              <li className="
-                text-sm 
-                text-blue-500
+                text-xl
+                text-white
                 p-1
                 font-normal
             "><a href="#">Serviços</a></li>
              <li className="
-                text-sm 
-                text-blue-500
+                text-xl
+                text-white
                 p-1
                 font-normal
             "><a href="#">Contato</a></li>
@@ -46,13 +53,13 @@ export default function BarraSuperior() {
 
     return (
         <div className="max-h-[768px] overflow-scroll mb-3">
-            <nav className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+            <nav className="bg-[#84573C] top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <a href="">Logo Aqui!</a>
                     <div className="flex items-center gap-4">
-                        <div className={isWindowMobile && !openNav ? 'hidden' : ''}>{navList}</div>
+                        <div>{navList}</div>
 
-                        <button className={isWindowMobile ? '' : 'hidden'} onClick={() => {
+                        <button className={isWindowMobile ? 'z-1' : 'hidden'} onClick={() => {
                             setOpenNav(!openNav)
                         }}>
                             {openNav ? (
@@ -61,7 +68,7 @@ export default function BarraSuperior() {
                                 fill="none"
                                 className="h-6 w-6"
                                 viewBox="0 0 24 24"
-                                stroke="currentColor"
+                                stroke="#fff"
                                 strokeWidth={2}
                                 >
                                 <path
@@ -75,7 +82,7 @@ export default function BarraSuperior() {
                                 xmlns=""
                                 className="h-6 w-6"
                                 fill="none"
-                                stroke="currentColor"
+                                stroke="#fff"
                                 strokeWidth={2}
                                 >
                                 <path

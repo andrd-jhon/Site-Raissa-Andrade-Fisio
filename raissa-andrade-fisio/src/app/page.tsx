@@ -7,7 +7,7 @@ export default function Home() {
  
   
   return (
-    <div className="p-5">
+    <div className="">
       <BarraSuperior></BarraSuperior>
       <h1 className='flex justify-center w-screen'>FISIOTERAPIA PÉLVICA E OBSTÉTRICA</h1>
       <p>
