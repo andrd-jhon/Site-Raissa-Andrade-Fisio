@@ -1,6 +1,8 @@
 'use client'
 
 import React from "react";
+import Image from "next/image"
+import logo from "../assets/LogoProvisorio.png"
 
 export default function BarraSuperior() {
 
@@ -23,7 +25,7 @@ export default function BarraSuperior() {
 
     const navList = (
         <ul className=
-        {`flex gap-10 transition-all duration-300 
+        {`flex gap-10 transition-all duration-300 mr-5
             ${isWindowMobile 
                 ? `flex-col items-center justify-center absolute top-0 left-0 w-full h-full gap-20
                 bg-[#84573C] 
@@ -58,11 +60,17 @@ export default function BarraSuperior() {
         <div className="max-h-[768px] overflow-scroll mb-3">
             <nav className="bg-[#84573C] top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
-                    <a href="">Logo Aqui!</a>
+                    <Image 
+                        src={logo}
+                        alt=""
+                        width={50}
+                        height={50}
+                        className="ml-5"
+                    />
                     <div className="flex items-center gap-4">
                         <div>{navList}</div>
 
-                        <button className={isWindowMobile ? 'z-1' : 'hidden'} onClick={() => {
+                        <button className={isWindowMobile ? 'z-1 cursor-pointer mr-5' : 'hidden'} onClick={() => {
                             setOpenNav(!openNav)
                         }}>
                             {openNav ? (
