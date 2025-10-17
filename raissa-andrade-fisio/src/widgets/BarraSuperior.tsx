@@ -23,9 +23,9 @@ export default function BarraSuperior() {
 
     const navList = (
         <ul className=
-        {`flex gap-6 transition-all duration-300 
+        {`flex gap-10 transition-all duration-300 
             ${isWindowMobile 
-                ? `flex-col items-center justify-center absolute top-0 left-0 w-full h-full
+                ? `flex-col items-center justify-center absolute top-0 left-0 w-full h-full gap-20
                 bg-[#84573C] 
                 ${openNav ? "opacity-95 visible" : "opacity-0 invisible"}`
                 : 'flex-row static opacity-100 visible'}
@@ -35,18 +35,21 @@ export default function BarraSuperior() {
                 text-white
                 p-1
                 font-normal
+                sublinhado-gradient
             "><a href="#">Quem Sou</a></li>
              <li className="
                 text-xl
                 text-white
                 p-1
                 font-normal
+                sublinhado-gradient
             "><a href="#">Serviços</a></li>
              <li className="
                 text-xl
                 text-white
                 p-1
                 font-normal
+                sublinhado-gradient
             "><a href="#">Contato</a></li>
         </ul>
     );
