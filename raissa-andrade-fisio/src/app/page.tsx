@@ -9,13 +9,13 @@ export default function Home() {
  
   
   return (
-    <div className="">
+    <div className="w-screen justify-items-center">
       <BarraSuperior></BarraSuperior>
-      <div className='flex justify-between'>
-        <Image src={imgPerfilCard} alt={'Imagem da fisioterapeuta Raissa Andrade.'} width={100} height={100}></Image>
-        <div className='w-100'>
-          <h1 className=''>FISIOTERAPIA PÉLVICA E OBSTÉTRICA</h1>
-          <p>
+      <div className='flex m-7 flex-col '>
+        <Image src={imgPerfilCard} alt={'Imagem da fisioterapeuta Raissa Andrade.'} width={300} height={300}></Image>
+        <div className=''>
+          <h1 className='font-semibold'>FISIOTERAPIA PÉLVICA E OBSTÉTRICA</h1>
+          <p className='text-justify w-80'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem iure
             assumenda laudantium. Dolore ratione ea obcaecati natus ut quisquam,
             expedita saepe nam quaerat ab? Magni odio nobis dignissimos in earum
