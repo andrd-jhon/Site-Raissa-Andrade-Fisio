@@ -1,9 +1,7 @@
 
 import BarraSuperior from '@/widgets/BarraSuperior'
 import React from 'react'
-import Image from "next/image"
-import imgPerfilCard from '../assets/imgCardPerfil.jpg'
-
+import CardPerfil from '@/components/CardPerfil/CardPerfil'
 
 export default function Home() {
  
@@ -11,11 +9,16 @@ export default function Home() {
   return (
     <div className="w-screen justify-items-center">
       <BarraSuperior></BarraSuperior>
-      <div className='flex m-7 flex-col '>
-        <Image src={imgPerfilCard} alt={'Imagem da fisioterapeuta Raissa Andrade.'} width={300} height={300}></Image>
+      <div className='flex m-7 flex-row mt-20 justify-between w-[900] bg-[url(/bgtextura.png)] bg-repeat-space'>
+        <CardPerfil 
+          source='/imgCardPerfil.jpg'
+          description='Imagem da fisioterapeuta Raissa Andrade.'
+          width={290}
+          height={200}
+        ></CardPerfil>
         <div className=''>
           <h1 className='font-semibold'>FISIOTERAPIA PÉLVICA E OBSTÉTRICA</h1>
-          <p className='text-justify w-80'>
+          <p className='text-justify w-75'>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem iure
             assumenda laudantium. Dolore ratione ea obcaecati natus ut quisquam,
             expedita saepe nam quaerat ab? Magni odio nobis dignissimos in earum

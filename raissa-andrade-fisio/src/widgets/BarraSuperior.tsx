@@ -59,13 +59,13 @@ export default function BarraSuperior() {
     return (
         // className="max-h-[768px] mb-3 w-screen"
         <div className="w-screen">
-            <nav className="bg-[#84573C] top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+            <nav className="bg-[#84573C] top-0 z-10 h-[100] max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <Image 
                         src={logo}
                         alt=""
-                        width={50}
-                        height={50}
+                        width={70}
+                        height={70}
                         className="ml-5"
                     />
                     <div className="flex items-center gap-4">
