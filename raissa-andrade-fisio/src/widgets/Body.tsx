@@ -1,17 +1,28 @@
-import CardPerfil from "@/components/CardPerfil/CardPerfil"
+'use client'
 
-const Body = () => {
+import CardPerfil from "@/components/CardPerfil/CardPerfil"
+import React from "react";
+
+interface BodyProps {
+  isWindowMobileProp : boolean
+}
+
+const Body = (props: BodyProps) => {
+    
     return(
-      <div className='flex flex-row pt-16 justify-between w-full h-screen'>
-        <div className="absolute inset-0 bg-[url(/bgtexturaedit.png)] bg-[length:200px] opacity-20"></div>
-        <div className="relative z-10 flex flex-row justify-between w-full">
-          <CardPerfil 
-            source='/imgCardPerfil.jpg'
-            description='Imagem da fisioterapeuta Raissa Andrade.'
-            width={290}
-            height={200}
-          ></CardPerfil>
-          <section className=''>
+      <div className={`flex flex-row pt-16 pl-5 pr-5 justify-between w-full`}>
+        <div className="absolute inset-0 bg-[url(/bgtexturaedit.png)] bg-[length:200px] opacity-10"></div>
+        <div className={`relative z-10 flex ${props.isWindowMobileProp ? `flex-col` : `flex-row`} justify-items-center w-full`}>
+          <div className={`${props.isWindowMobileProp ? '' : 'pr-20'}`}>
+            <CardPerfil 
+              imageSource='/imgCardPerfil.jpg'
+              description='Imagem da fisioterapeuta Raissa Andrade.'
+              imageWidth={280}
+              imageHeight={200}
+              titulo='Raissa Andrade'
+            ></CardPerfil>
+          </div>
+          <section className={`${props.isWindowMobileProp ? '' : 'pl-20'}`}>
             <h1 className='font-semibold'>FISIOTERAPIA PÉLVICA E OBSTÉTRICA</h1>
             <p className='text-justify w-75'>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem iure

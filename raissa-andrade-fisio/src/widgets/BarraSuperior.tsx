@@ -2,34 +2,22 @@
 
 import React from "react";
 import Image from "next/image"
-// import logo from "../assets/LogoProvisorio.png"
 
-export default function BarraSuperior() {
+interface barraSuperiorProps {
+    isWindowMobileProp : boolean
+    openNavProp : boolean
+    setOpenNavProp : React.Dispatch<React.SetStateAction<boolean>>
+}
 
-    const [openNav, setOpenNav] = React.useState(false);
-    const [isWindowMobile, setIsWindowMobile] = React.useState(false);
-
-    React.useEffect(() => {
-        window.addEventListener(
-        "resize",
-        () => {
-            if (window.innerWidth >= 640){
-                setOpenNav(false)
-                setIsWindowMobile(false)
-            }else{
-                setIsWindowMobile(true)
-            }
-        }
-        );
-    }, []);
+export default function BarraSuperior(props: barraSuperiorProps) {
 
     const navList = (
         <ul className=
         {`flex gap-10 transition-all duration-300 mr-5
-            ${isWindowMobile 
+            ${props.isWindowMobileProp 
                 ? `flex-col items-center justify-center absolute top-0 left-0 w-full h-full gap-20
                 bg-[#84573C] 
-                ${openNav ? "opacity-95 visible" : "opacity-0 invisible"}`
+                ${props.openNavProp ? "opacity-95 visible" : "opacity-0 invisible"}`
                 : 'flex-row static opacity-100 visible'}
         `}>
             <li className="
@@ -59,22 +47,24 @@ export default function BarraSuperior() {
     return (
         // className="max-h-[768px] mb-3 w-screen"
         <div className="w-screen">
-            <nav className="bg-[#84573C] top-0 relative z-50 h-[100] max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+            <nav className="bg-[#84573C] top-0 relative z-50 h-[100px] max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
-                    <Image 
+                    <div className="ml-5 w-[70px] h-[70px] object-contain">
+                        <Image 
                         src={'/LogoProvisorio.png'}
                         alt=""
                         width={70}
                         height={70}
                         className="ml-5"
-                    />
+                        />
+                    </div>
                     <div className="flex items-center gap-4">
                         <div>{navList}</div>
 
-                        <button className={isWindowMobile ? 'z-20 cursor-pointer mr-5' : 'hidden'} onClick={() => {
-                            setOpenNav(!openNav)
+                        <button className={props.isWindowMobileProp ? 'z-20 cursor-pointer mr-5' : 'hidden'} onClick={() => {
+                            props.setOpenNavProp(!props.openNavProp)
                         }}>
-                            {openNav ? (
+                            {props.openNavProp ? (
                                 <svg
                                 xmlns=""
                                 fill="none"
@@ -109,10 +99,6 @@ export default function BarraSuperior() {
                     </div>
                 </div>
             </nav>
-
-            {/* <nav className="relative z-50 bg-[#84573C] w-screen h-[200]">
-
-            </nav> */}
         </div>
     )
 }

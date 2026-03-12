@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
 interface CardPerfilProps{
-    source: string,
+    imageSource: string,
     description: string,
-    width: number,
-    height: number
-
+    imageWidth: number,
+    imageHeight: number,
+    titulo: string
 }
 
 const CardPerfil = (props: CardPerfilProps) => {
@@ -13,12 +13,12 @@ const CardPerfil = (props: CardPerfilProps) => {
         <div className='w-86 size-130 flex items-center flex-col bg-[#D7BEA2] rounded-3xl'>
             <Image 
                 className='mt-10 rounded-2xl'
-                src={props.source}
-                width={props.width}
-                height={props.height}
+                src={props.imageSource}
+                width={props.imageWidth}
+                height={props.imageHeight}
                 alt={props.description}
             />
-            <h1 className='text-2xl'>Raissa Andrade</h1>
+            <h1 className='text-2xl'>{props.titulo}</h1>
         </div>
     )
 }
