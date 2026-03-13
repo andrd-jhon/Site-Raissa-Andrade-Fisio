@@ -45,8 +45,7 @@ export default function BarraSuperior(props: barraSuperiorProps) {
     );
 
     return (
-        // className="max-h-[768px] mb-3 w-screen"
-        <div className="w-screen">
+        <div className="w-screen shadow-2xl">
             <nav className="bg-[#84573C] top-0 relative z-50 h-[100px] max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <div className="ml-5 w-[70px] h-[70px] object-contain">
