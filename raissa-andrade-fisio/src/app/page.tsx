@@ -1,4 +1,5 @@
 'use client'
+import Footer from '@/components/footer/Footer';
 import BarraSuperior from '@/widgets/BarraSuperior'
 import Body from '@/widgets/Body';
 import React from 'react'
@@ -29,16 +30,21 @@ export default function Home() {
 
   return (
     <div className="w-screen justify-items-center">
-      <BarraSuperior
+      <nav>
+        <BarraSuperior
         isWindowMobileProp = {isWindowMobile}
         openNavProp = {openNav}
         setOpenNavProp = {setOpenNav}
-      ></BarraSuperior>
-      <div>
+      />
+      </nav>
+      <main>
         <Body
-          isWindowMobileProp = {isWindowMobile}
-        ></Body>
-      </div>
+        isWindowMobileProp = {isWindowMobile}
+      ></Body>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

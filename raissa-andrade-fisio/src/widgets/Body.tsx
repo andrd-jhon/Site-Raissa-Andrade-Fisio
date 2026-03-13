@@ -10,7 +10,7 @@ interface BodyProps {
 const Body = (props: BodyProps) => {
     
     return(
-      <div className={`flex flex-row justify-between w-full`}>
+      <div className={`flex flex-row justify-between w-full border-2`}>
         <div className="absolute inset-0 bg-[url(/bgtexturaedit.png)] bg-[length:200px] opacity-10 py-[600px]"></div>
         <div className={`relative z-10 flex ${props.isWindowMobileProp ? `flex-col` : `flex-row`} justify-items-center w-full`}>
           <div className={`${props.isWindowMobileProp ? 'pt-5' : 'pr-20 pt-10'}`}>
