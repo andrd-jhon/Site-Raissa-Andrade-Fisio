@@ -42,9 +42,6 @@ export default function Home() {
         isWindowMobileProp = {isWindowMobile}
       ></Body>
       </main>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
