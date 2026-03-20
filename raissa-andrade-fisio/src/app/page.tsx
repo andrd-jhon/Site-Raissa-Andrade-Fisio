@@ -1,5 +1,5 @@
 'use client'
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/Footer';
 import BarraSuperior from '@/widgets/BarraSuperior'
 import Body from '@/widgets/Body';
 import React from 'react'

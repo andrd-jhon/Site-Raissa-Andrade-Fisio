@@ -1,6 +1,6 @@
 'use client'
 
-import CardPerfil from "@/components/CardPerfil/CardPerfil"
+import CardPerfil from "@/components/CardPerfil";
 import React from "react";
 
 interface BodyProps {
