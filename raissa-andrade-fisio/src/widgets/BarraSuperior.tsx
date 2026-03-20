@@ -21,7 +21,7 @@ export default function BarraSuperior({
     <nav
       role="navigation"
       aria-label="Barra de navegação"
-      className="relative z-50 w-screen max-w-full h-[100px] bg-[#84573C] px-4 py-2 lg:px-8 lg:py-4 shadow-2xl"
+      className="relative z-50 w-screen max-w-full h-[100px] bg-[#84573C] px-4 py-2 lg:px-8 lg:py-4 shadow-2xl bg-gradient-to-r from-[#54351E] to-[#84573C]"
     >
       <div className="flex items-center justify-between">
         <div className="ml-5">
