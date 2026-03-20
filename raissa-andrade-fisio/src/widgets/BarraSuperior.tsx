@@ -3,13 +3,13 @@
 import React from "react";
 import Image from "next/image"
 
-interface barraSuperiorProps {
+interface NavProps {
     isWindowMobileProp : boolean
     openNavProp : boolean
     setOpenNavProp : React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function BarraSuperior(props: barraSuperiorProps) {
+export default function BarraSuperior(props: NavProps) {
 
     const navList = (
         <ul className=
@@ -65,7 +65,6 @@ export default function BarraSuperior(props: barraSuperiorProps) {
                         }}>
                             {props.openNavProp ? (
                                 <svg
-                                xmlns=""
                                 fill="none"
                                 className="h-6 w-6"
                                 viewBox="0 0 24 24"
@@ -80,10 +79,10 @@ export default function BarraSuperior(props: barraSuperiorProps) {
                                 </svg>
                             ): 
                                 <svg
-                                xmlns=""
                                 className="h-6 w-6"
                                 fill="none"
                                 stroke="#fff"
+                                viewBox="0 0 24 24"
                                 strokeWidth={2}
                                 >
                                 <path
