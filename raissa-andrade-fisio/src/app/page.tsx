@@ -28,6 +28,23 @@ export default function Home() {
     }
   }, [])
 
+  React.useEffect(() => {
+  const html = document.documentElement
+
+  if (openNav) {
+    document.body.style.overflow = "hidden"
+    html.style.overflow = "hidden"
+  } else {
+    document.body.style.overflow = "auto"
+    html.style.overflow = "auto"
+  }
+
+  return () => {
+    document.body.style.overflow = "auto"
+    html.style.overflow = "auto"
+  }
+}, [openNav])
+
   return (
     <div className="w-screen justify-items-center">
         <BarraSuperior

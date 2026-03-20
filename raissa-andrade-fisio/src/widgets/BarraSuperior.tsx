@@ -46,7 +46,7 @@ export default function BarraSuperior({
           {/* Botão hambúrguer apenas no mobile */}
           <button
             type="button"
-            className={isWindowMobileProp ? "z-20 cursor-pointer mr-5" : "hidden"}
+            className={isWindowMobileProp ? "z-60 cursor-pointer mr-5" : "hidden"}
             onClick={toggle}
             aria-label={openNavProp ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             aria-expanded={openNavProp}

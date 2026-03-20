@@ -27,7 +27,7 @@ export default function NavList({
   const baseUl =
     "flex gap-10 transition-all duration-300 mr-5"; // gap e mr mantidos; dá para mover para o pai se quiser
   const mobileUl =
-    "flex-col items-center justify-center absolute top-0 left-0 w-full h-full gap-20 bg-[#84573C]";
+    "flex-col items-center justify-center fixed inset-0 w-screen h-screen gap-20 bg-[#84573C] z-50";
   const desktopUl = "flex-row static";
 
   // opacidade/visibilidade apenas no mobile
