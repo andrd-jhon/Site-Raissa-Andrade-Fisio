@@ -3,6 +3,11 @@ import Footer from '@/widgets/Footer';
 import BarraSuperior from '@/widgets/BarraSuperior'
 import Body from '@/widgets/Body';
 import React from 'react'
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+})
 
 export default function Home() {
  
@@ -46,7 +51,7 @@ export default function Home() {
 }, [openNav])
 
   return (
-    <div className="w-screen justify-items-center">
+    <div className={`w-screen justify-items-center ${josefin.className}`}>
         <BarraSuperior
         isWindowMobileProp = {isWindowMobile}
         openNavProp = {openNav}

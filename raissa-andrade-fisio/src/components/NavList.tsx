@@ -1,6 +1,11 @@
 "use client";
 
 import React from "react";
+import { Josefin_Sans } from "next/font/google";
+
+const josefin = Josefin_Sans({
+  subsets: ["latin"],
+})
 
 type NavLink = {
   label: string;
@@ -43,7 +48,7 @@ export default function NavList({
         <li key={link.label}>
           <a
             href={link.href}
-            className="text-xl text-white p-1 font-normal sublinhado-gradient"
+            className={`text-xl text-white p-1 font-normal sublinhado-gradient ${josefin.className}`}
             onClick={onItemClick}
           >
             {link.label}
