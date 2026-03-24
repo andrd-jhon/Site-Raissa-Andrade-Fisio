@@ -2,10 +2,11 @@
 
 import CardPerfil from "@/components/CardPerfil";
 import React from "react";
+import ServicesSection from "./ServicesSection";
 
 const Body = () => {
   return (
-    <div className="flex w-full justify-center">
+    <div className="flex w-full justify-center flex-col items-center">
       
       <div className="absolute inset-0 bg-[url(/bgtexturaedit.png)] bg-[length:200px] opacity-10"></div>
 
@@ -35,6 +36,8 @@ const Body = () => {
         </section>
 
       </div>
+
+      <ServicesSection/>
 
     </div>
   )
